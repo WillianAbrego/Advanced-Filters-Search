@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 
-Route::post('filter', [PropertyController::class, 'filter']);
+Route::get('filter', [PropertyController::class, 'filter']);
