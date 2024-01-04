@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Classes\Search\Property\Filters;
+namespace App\Classes\Search\Filters\Property;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
-class IdFilter
+class UserFilter
 {
     public static function apply(Builder $query, Request $request)
     {
-        if ($request->id) {
-            $query->where('id', $request->id);
+        if ($request->user) {
+            $query->where('user_id', $request->user);
         }
         return $query;
     }
